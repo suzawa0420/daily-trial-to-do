@@ -7,12 +7,17 @@ $back-icon-size: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: white;
   padding: $header-padding-y 16px;
-  font-weight: bold;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  border-bottom: 1px solid $line;
 
   a{
-    color: white;
+    color: $text-base-color;
   }
 
   &_loginBtn {
