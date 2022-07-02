@@ -1,1 +1,15 @@
-Edit
+.container
+  %ul
+    - @profile.errors.full_messages.each do |message|
+      %li= message
+
+
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    .field
+      = f.label :avatar, "アバター"
+      = f.file_field :avatar
+    .field
+      = f.label :nickname, "ハンドルネーム"
+      = f.text_field :nickname, class: "text"
+
+    = f.submit "Save", class: "btn-primary"

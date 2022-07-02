@@ -30,6 +30,10 @@ class User < ApplicationRecord
     boards.exists?(id: board)
   end
 
+  def prepare_profile
+    profile || build_profile
+  end
+
   def avatar_image
     if profile&.avatar&.attached?
       profile.avatar
