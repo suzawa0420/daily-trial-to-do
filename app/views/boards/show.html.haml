@@ -11,9 +11,16 @@
             %h3.sub_title.card_detail_title= task.title
         .card_description
           = task.content
-      -# .card_avatar
-      -#   - if board.user.profile
-      -#     = image_tag board.user.avatar_image, class: "card_avatar_icon"
+        .card_flex
+          .card_flex_avatar
+            - if task.user.profile
+              = image_tag task.user.avatar_image, class: "card_avatar_icon"
+            - task.comment_icons.each do |icon|
+              = image_tag icon, class: "card_avatar_icon"
+          .card_flex_comments
+            - if task.comments.count > 0
+              = task.comments.count
+              = image_tag "comments.svg"
 
 
   = link_to new_board_task_path(@board) do

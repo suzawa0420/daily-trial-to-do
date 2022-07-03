@@ -17,13 +17,15 @@ class Board < ApplicationRecord
   belongs_to :user
   has_many :tasks, dependent: :destroy
 
-  def comment_count
-    sum_comment_count = self.tasks.map { |task| task.comments.count }
-    sum_comment_count.sum
-  end
+  # def comment_count
+  #   sum_comment_count = self.tasks.map { |task| task.comments.count }
+  #   sum_comment_count.sum
+  # end
 
-  def comment_icons
-    icons = tasks.map { |task| task.comments.map { |comment| comment.user.avatar_image } }
-    icons.flatten
-  end
+  # def comment_icons
+  #   icons = tasks.map { |task| task.comments.map { |comment| comment.user.avatar_image } }
+  #   icons.flatten
+  # end
+
+
 end

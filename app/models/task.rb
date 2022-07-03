@@ -23,4 +23,9 @@ class Task < ApplicationRecord
 
   has_one_attached :eyecatch
 
+  def comment_icons
+    self.comments.map { |comment| comment.user.avatar_image }
+  end
+
+
 end
