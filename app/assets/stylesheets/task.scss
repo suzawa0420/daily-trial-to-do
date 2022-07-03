@@ -1,0 +1,14 @@
+@import './variables';
+
+.task{
+  &_detail{
+    position: relative;
+  }
+
+  &_content{
+    background: #F4F4F4;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 32px 20px 20px;
+  }
+}
