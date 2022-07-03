@@ -18,8 +18,12 @@ class Board < ApplicationRecord
   has_many :tasks, dependent: :destroy
 
   def comment_count
-    tasks.map do |task|
-      task.comments.count
-    end
+    sum_comment_count = self.tasks.map { |task| task.comments.count }
+    sum_comment_count.sum
+  end
+
+  def comment_icons
+    icons = tasks.map { |task| task.comments.map { |comment| comment.user.avatar_image } }
+    icons.flatten
   end
 end
