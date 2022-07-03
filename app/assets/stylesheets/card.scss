@@ -46,4 +46,25 @@
     border-radius: 8px;
     object-fit: cover;
   }
+
+  &_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_avatar{
+      margin-top: 10px;
+      &_icon{
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+      }
+    }
+    &_comments{
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: gray;
+    }
+  }
+
 }

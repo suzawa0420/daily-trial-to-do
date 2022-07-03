@@ -16,9 +16,14 @@
       .card_description
         = link_to board_path(board) do
           = board.description
-      .card_avatar
-        - if board.user.profile
-          = image_tag board.user.avatar_image, class: "card_avatar_icon"
+      .card_flex
+        .card_flex_avatar
+          - if board.user.profile
+            = image_tag board.user.avatar_image, class: "card_avatar_icon"
+        .card_flex_comments
+          - if board.comment_count.sum > 0
+            = board.comment_count.sum
+            = image_tag "comments.svg"
 
 
 
