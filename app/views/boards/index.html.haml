@@ -16,6 +16,9 @@
       .card_description
         = link_to board_path(board) do
           = board.description
+      .card_avatar
+        - if board.user.profile
+          = image_tag board.user.avatar_image, class: "card_avatar_icon"
 
 
 
