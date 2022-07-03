@@ -16,3 +16,21 @@
 
   .task_content
     = @task.content
+
+  - if @task.comments.present?
+    %h3 Comment
+    .comment
+      - @task.comments.each do |comment|
+        .comment_content
+          .comment_flex_icon
+            = image_tag comment.user.avatar_image , class: "comment_avatar"
+          .comment_flex_content
+            = comment.content
+
+
+
+
+
+  = link_to new_board_task_comment_path(@task.board, @task) do
+    .new_comment
+      + Add new comment

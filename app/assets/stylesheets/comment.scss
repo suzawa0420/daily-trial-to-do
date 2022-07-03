@@ -1,0 +1,29 @@
+@import './variables';
+
+.comment{
+
+
+  &_avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+  }
+
+  &_content{
+    margin: 20px 0;
+    display: flex;
+  }
+
+  &_flex{
+    &_icon{
+      flex-basis: 50px;
+    }
+    &_content{
+      flex-basis: auto;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+}

@@ -13,11 +13,9 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to board_path(@board), notice: "保存できました！"
     else
-      aaaa
       flash.now[:error] = "保存に失敗しました"
       render :new
     end
-
   end
 
   def show
