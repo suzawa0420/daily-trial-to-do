@@ -36,6 +36,9 @@
       width: $avatar-size;
       height: $avatar-size;
       border-radius: 100%;
+      &:nth-child(n + 2){
+        margin-left: -20px;
+      }
     }
   }
 
