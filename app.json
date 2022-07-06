@@ -1,0 +1,16 @@
+{
+  "name": "to do app",
+  "description": "This is to do app",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/suzawa0420/daily-trial-to-do",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
