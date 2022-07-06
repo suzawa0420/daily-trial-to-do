@@ -281,7 +281,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  dotenv
   dotenv-rails
   erb2haml
   faker
